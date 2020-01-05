@@ -1,0 +1,29 @@
+# why use yaml to manage plugins
+# see http://genkisugimoto.com/blog/manage-vim-plugins-via-yaml/
+
+# StartUp Plugins{{{
+- repo: Shougo/dein.vim
+- repo: taigacute/spaceline.vim
+- repo: bagrat/vim-buffet
+  hook_add: source $VIM_PATH/layers/+ui/buffet/config.vim
+#}}}
+
+# Core Plugins{{{
+- repo: neoclide/coc.nvim
+  merge: 0
+  rev: release
+  hook_add: source  $VIM_PATH/layers/+completion/coc/config.vim
+
+- repo: honza/vim-snippets
+  depends : coc.nvim
+# }}}
+
+# Interface{{{
+- repo: ryanoasis/vim-devicons
+  hook_add: let g:webdevicons_enable_denite = 1
+
+- repo: ludovicchabant/vim-gutentags
+  if: executable('ctags')
+  on_path: .*
+  hook_source: source  $VIM_PATH/layers/+tools/vim-gutentags/config.vim
+# }}}
