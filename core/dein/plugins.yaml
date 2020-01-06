@@ -7,6 +7,8 @@
 - repo: bagrat/vim-buffet
   hook_add: source $VIM_PATH/layers/+ui/buffet/config.vim
 - repo: mhinz/vim-startify
+- repo: tpope/vim-surround
+- repo: jiangmiao/auto-pairs
 #}}}
 
 # Core Plugins{{{
@@ -34,37 +36,108 @@
   on_map: { n: <Plug> }
   hook_source: source  $VIM_PATH/layers/+tools/choosewin/config.vim
 
-# - repo: easymotion/vim-easymotion
-#   on_map: { n: <Plug> }
-#   hook_source: |
-#         let g:EasyMotion_do_mapping = 0
-#         let g:EasyMotion_prompt = 'Jump to → '
-#         let g:EasyMotion_keys = 'fjdkswbeoavn'
-#         let g:EasyMotion_smartcase = 1
-#         let g:EasyMotion_use_smartsign_us = 1
+- repo: easymotion/vim-easymotion
+  on_map: { n: <Plug> }
+  hook_source: |
+        let g:EasyMotion_do_mapping = 0
+        let g:EasyMotion_prompt = 'Jump to → '
+        let g:EasyMotion_keys = 'fjdkswbeoavn'
+        let g:EasyMotion_smartcase = 1
+        let g:EasyMotion_use_smartsign_us = 1
 # }}}
 
 # File manager{{{
-# - repo: Shougo/defx.nvim
-#   on_cmd: Defx
-#   hook_source: source  $VIM_PATH/layers/+ui/defx/config.vim
+- repo: Shougo/defx.nvim
+  on_cmd: Defx
+  hook_source: source  $VIM_PATH/layers/+ui/defx/config.vim
 
-# - repo: kristijanhusak/defx-git
-#   on_source: defx.nvim
+- repo: kristijanhusak/defx-git
+  on_source: defx.nvim
 
-# - repo: kristijanhusak/defx-icons
-#   on_source: defx.nvim
+- repo: kristijanhusak/defx-icons
+  on_source: defx.nvim
 # }}}
 
 # Search Plugins{{{
-# - repo: junegunn/fzf
-#   build: './install --all'
-#   merged: 0
+- repo: junegunn/fzf
+  build: './install --all'
+  merged: 0
 
-# - repo: junegunn/fzf.vim
-#   depends: fzf
-#   on_cmd: [Colors,Rg,Buffers]
-#   on_func: Fzf_dev
-#   hook_source: source  $VIM_PATH/layers/+completion/fzf/config.vim
+- repo: junegunn/fzf.vim
+  depends: fzf
+  on_cmd: [Colors,Rg,Buffers]
+  on_func: Fzf_dev
+  hook_source: source  $VIM_PATH/layers/+completion/fzf/config.vim
 
+# }}}
+
+# Language{{{
+
+- { repo: honza/dockerfile.vim, on_ft: Dockerfile }
+- { repo: leafgarland/typescript-vim, on_ft: [typescriptreact,typescript] }
+- { repo: peitalin/vim-jsx-typescript, on_ft: [typescriptreact]}
+
+- { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
+- { repo: tmhedberg/SimpylFold, on_ft: python }
+- { repo: vim-scripts/python_match.vim, on_ft: python }
+
+- repo: vim-python/python-syntax
+  on_ft: python
+  hook_add: let g:python_highlight_all = 1
+
+- { repo: chemzqm/vim-jsx-improve, on_ft: [javascript,javascriptreact]}
+- { repo: vim-scripts/xml.vim, on_ft: xml}
+- { repo: pearofducks/ansible-vim, on_ft: [ yaml.ansible, ansible_hosts ]}
+
+- repo: elzr/vim-json
+  on_ft: json
+  hook_add: let g:vim_json_syntax_conceal = 0
+
+- repo: fatih/vim-go
+  on_ft: go
+  hook_source: source  $VIM_PATH/layers/+lang/go/config.vim
+
+- repo: tpope/vim-markdown
+  on_ft: markdown
+  hook_add: |
+         let g:markdown_fenced_languages = [
+          \ 'html',
+           \ 'bash=sh',
+           \ 'css',
+           \ 'javascript',
+           \ 'jsx=javascriptreact',
+           \ 'tsx=typescriptreact',
+           \ 'go',
+           \]
+# }}}
+
+# Coding{{{
+- repo: tyru/caw.vim
+  on_map: { nx: <Plug> }
+
+- repo: sbdchd/neoformat
+  on_cmd: [Neoformat,Neoformat!]
+  hook_source: source  $VIM_PATH/layers/+tools/neoformat/config.vim
+
+- repo: Yggdroot/indentLine
+  on_ft: [python,html,css,vim,javascript,javascriptreact,vue]
+  hook_source: source $VIM_PATH/layers/+ui/indentline/config.vim
+
+
+- repo: liuchengxu/vista.vim
+  on_cmd: [Vista,Vista!,Vista!!]
+  hook_source: source  $VIM_PATH/layers/+tools/vista/config.vim
+
+- repo: mattn/emmet-vim
+  on_event: InsertEnter
+  on_ft: [ html, css, javascript, javascriptreact ]
+  hook_source: |
+    let g:user_emmet_complete_tag = 0
+    let g:user_emmet_install_global = 0
+    let g:user_emmet_install_command = 0
+    let g:user_emmet_mode = 'i'
+
+- repo: luochen1990/rainbow
+  on_ft: [python,javascript,javascriptreact,html,css,go,vim,toml]
+  hook_source: let g:rainbow_active = 1
 # }}}
