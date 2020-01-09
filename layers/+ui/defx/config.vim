@@ -59,27 +59,13 @@ augroup user_plugin_defx
 
 augroup END
 
-" Internal functions
-" ---
-
-" Deprecated after disabling defx's (buf)listed
-" function! s:defx_close_tab(tabnr)
-" 	" When a tab is closed, find and delete any associated defx buffers
-" 	for l:nr in tabpagebuflist()
-" 		if getbufvar(l:nr, '&filetype') ==# 'defx'
-" 			silent! execute 'bdelete '.l:nr
-" 			break
-" 		endif
-" 	endfor
-" endfunction
-
 function! s:defx_toggle_tree() abort
 	" Open current file, or toggle directory expand/collapse
 	if defx#is_directory()
 		return defx#do_action('open_or_close_tree')
 	endif
-	" return defx#do_action('multi', ['drop', 'quit'])
-	return defx#do_action('multi', ['drop'])
+	return defx#do_action('multi', ['drop', 'quit'])
+	" return defx#do_action('multi', ['drop'])
 endfunction
 
 function! s:defx_handle_dirchanged(event)
