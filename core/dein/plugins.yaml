@@ -7,6 +7,7 @@
 - repo: bagrat/vim-buffet
   hook_add: source $VIM_PATH/layers/+ui/buffet/config.vim
 - repo: mhinz/vim-startify
+  hook_add: source $VIM_PATH/layers/+ui/startify/config.vim
 - repo: tpope/vim-surround
 - repo: jiangmiao/auto-pairs
 #}}}

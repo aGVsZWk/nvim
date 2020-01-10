@@ -37,15 +37,24 @@
 | **Within Defx window** |      |                                |
 | h                      | n    | 折叠目录数                     |
 | j / k                  | n    | 上下移动光标                   |
-| <Return> / l           | n    | 切换折腾展开目录或者打开文件   |
+| <Return> / l / e       | n    | 切换折腾展开目录或者打开文件   |
 | \<Space>               | n    | 选择当前文件或者文件夹         |
 | \*                     | n    | 反转选择 all                   |
-| <Space>                | n    | 移动至上级目录                 |
 | & / \\                 | n    | 移动至项目根目录               |
 | ~                      | n    | 移动至用户根目录               |
 | st                     | n    | 在新 tab 中打开文件            |
 | sv                     | n    | 在垂直分屏中打开文件           |
 | sg                     | n    | 在水平分屏中打开文件           |
+| y                      | n    | 复制路径                       |
+| q                      | n    | 关闭文件管理器                 |
+| c                      | n    | 复制文件                       |
+| m                      | n    | 移动文件                       |
+| p                      | n    | 粘贴文件                       |
+| r                      | n    | 重命名文件                     |
+| dd                     | n    | 移动至回收站                   |
+| K                      | n    | 新建文件夹                     |
+| N                      | n    | 新建文件                       |
+| <BS> / u               | n    | 上一层                         |
 
 #### Plugin: fzf
 
@@ -55,3 +64,6 @@
 | LocalLeader + f | n    | 搜索 文件 (:Files)     |
 | LocalLeader + g | n    | 搜索 文件内容 (:Rg)    |
 | LocalLeader + t | n    | 搜索 Tags (:Tags)      |
+| ctrl + t        | n    | 新 tab 页面打开        |
+| ctrl + x        | n    | 垂直分屏打开           |
+| ctrl + v        | n    | 水平分屏打开           |
