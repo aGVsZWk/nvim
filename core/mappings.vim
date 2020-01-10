@@ -6,9 +6,6 @@ nmap      s [Window]
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> [n :bnext<CR>
 
-" Start new line from any cursor position in insert-mode
-inoremap <C-o> <C-o>o
-
 " Start an external command with a single bang
 nnoremap ! :!
 
@@ -47,6 +44,9 @@ vnoremap <Leader>j :m'>+<CR>gv=gv
 nnoremap <Leader>d m`YP``
 vnoremap <Leader>d YPgv
 
+" Duplicate paragraph
+nnoremap <leader>cp yap<S-}>p
+
 nnoremap <silent> [Window]v  :<C-u>split<CR>
 nnoremap <silent> [Window]g  :<C-u>vsplit<CR>
 nnoremap <silent> [Window]t  :tabnew<CR>
@@ -65,11 +65,6 @@ function! s:window_empty_buffer()
 		silent! execute 'bdelete '.l:current
 	endif
 endfunction
-
-" Write buffer (save)
-noremap <Leader>w :w<CR>
-imap ,w <esc>:w<CR>
-
 
 " 退出快捷键
 inoremap jj <Esc>`^

@@ -11,7 +11,7 @@ let $DATA_PATH = g:etc#cache_path
 
 " Initialize startup settings
 if has('vim_starting')
-	let g:mapleader=','
+	let g:mapleader="\<Space>"
 	let g:maplocalleader=';'
 
 	" Release keymappings prefixes, evict entirely for use of plug-ins.

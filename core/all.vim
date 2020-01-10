@@ -10,10 +10,10 @@ if dein#tap('vim-easymotion')
 endif
 
 if dein#tap('fzf.vim')
-        nnoremap <silent> <leader>bb :Buffers<CR>
+        nnoremap <silent> <localleader>b :Buffers<CR>
         nnoremap <silent> <LocalLeader>f :call Fzf_dev()<CR>
         nnoremap <silent> <localleader>g :Rg<CR>
-        nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
+        nnoremap <silent> <localleader>t :Tags<CR>
 endif
 
 if dein#tap('caw.vim')
