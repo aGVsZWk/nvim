@@ -1,6 +1,77 @@
 ## NVIM 个人配置
 
+### 特性
+
+- 快速启动
+
+- 模块化插件配置
+
+- 基于 dein 懒加载大部分插件
+
+- 易于使用，前端的配置多些
+
+- 基于 coc 的自动补全
+
+- 基于 zfz 的搜索功能
+
+- one dark 主题，也可以自由替换喜欢的主题
+
 ### 自定义键位
+
+### 文件结构
+
+```
+.
+├── README.md
+├── autoload
+│   ├── etc
+│   │   ├── providers
+│   │   │   └── dein.vim
+│   │   └── util.vim
+│   ├── etc.vim
+│   └── onedark.vim
+├── coc-extensions // coc 配置
+│   └── repl.js
+├── coc-settings.json // coc 配置
+├── colors // 主题
+│   └── onedark.vim
+├── core // 核心配置
+│   ├── all.vim // 插件按钮映射配置
+│   ├── dein
+│   │   └── plugins.yaml // 插件管理配置
+│   ├── filetype.vim // 文件类型配置
+│   ├── general.vim // 常规配置
+│   ├── mappings.vim // 常规键盘映射
+│   └── vimrc // 初始化文件
+├── init.vim // nvim入口文件
+└── layers
+├── +completion
+│   ├── coc // coc 插件配置
+│   │   └── config.vim
+│   └── fzf // fzf 插件配置
+│   └── config.vim
+├── +lang // 语言配置
+│   └── go // go 语言配置
+│   └── config.vim
+├── +tools
+│   ├── choosewin // 窗口选择工具配置
+│   │   └── config.vim
+│   ├── neoformat // 格式化工具配置
+│   │   └── config.vim
+│   ├── vim-gutentags // tag 生成配置
+│   │   └── config.vim
+│   └── vista // tag侧边栏配置
+│   └── config.vim
+└── +ui
+├── buffet // 顶栏配置
+│   └── config.vim
+├── defx // 文件管理器配置
+│   └── config.vim
+├── indentline // 状态栏配置
+│   └── config.vim
+└── startify // 开屏页配置
+└── config.vim
+```
 
 #### 通用
 
