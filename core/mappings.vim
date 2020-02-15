@@ -28,8 +28,6 @@ noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
 noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
 
 " Fast saving from all modes
-nnoremap <silent><Leader>w :write<CR>
-vnoremap <silent><Leader>w <Esc>:write<CR>
 nnoremap <silent><C-s> :<C-u>write<CR>
 vnoremap <silent><C-s> :<C-u>write<CR>
 cnoremap <silent><C-s> <C-u>write<CR>

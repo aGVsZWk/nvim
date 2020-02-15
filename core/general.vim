@@ -136,8 +136,9 @@ augroup user_secure
         \ setlocal noswapfile noundofile nobackup nowritebackup viminfo= shada=
 augroup END
 
-if has('folding')
-    set foldenable
-    set foldmethod=syntax
-    set foldlevelstart=99
-endif
+set nofoldenable
+" if has('folding')
+"     set foldenable
+"     set foldmethod=syntax
+"     set foldlevelstart=99
+" endif

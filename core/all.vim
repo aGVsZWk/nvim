@@ -6,14 +6,37 @@ if dein#tap('defx.nvim')
 endif
 
 if dein#tap('vim-easymotion')
-	nmap ss <Plug>(easymotion-s2)
+	" nmap ss <Plug>(easymotion-s2)
+  nmap ss <Plug>(easymotion-overwin-f2)
+  map  <Leader>f <Plug>(easymotion-bd-f)
+  nmap <Leader>f <Plug>(easymotion-overwin-f)
+  " JK motions: Line motions
+  map <Leader>j <Plug>(easymotion-j)
+  map <Leader>k <Plug>(easymotion-k)
+  " Move to line
+  map <Leader>L <Plug>(easymotion-bd-jk)
+  nmap <Leader>L <Plug>(easymotion-overwin-line)
+  " Move to word
+  map  <Leader>w <Plug>(easymotion-bd-w)
+  nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+  map  / <Plug>(easymotion-sn)
+  omap / <Plug>(easymotion-tn)
+
+  " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+  " Without these mappings, `n` & `N` works fine. (These mappings just provide
+  " different highlight method and have some other features )
+  map  n <Plug>(easymotion-next)
+  map  N <Plug>(easymotion-prev)
+  
 endif
 
-if dein#tap('fzf.vim')
-        nnoremap <silent> <localleader>b :Buffers<CR>
-        nnoremap <silent> <LocalLeader>f :call Fzf_dev()<CR>
-        nnoremap <silent> <localleader>g :Rg<CR>
-        nnoremap <silent> <localleader>t :Tags<CR>
+if dein#tap('LeaderF')
+  let g:Lf_ShortcutF = "<LocalLeader>f"
+  noremap <localleader>b :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+  noremap <localleader>m :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+  noremap <localleader>t :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+  noremap <localleader>l :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 endif
 
 if dein#tap('caw.vim')
@@ -32,11 +55,6 @@ if dein#tap('caw.vim')
 	endfunction
 	autocmd FileType * call InitCaw()
 	call InitCaw()
-endif
-
-if dein#tap('vim-choosewin')
-	nmap -         <Plug>(choosewin)
-	nmap <Leader>- :<C-u>ChooseWinSwapStay<CR>
 endif
 
 if dein#tap('vista.vim')
@@ -114,8 +132,8 @@ if dein#tap('coc.nvim')
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
         " coc-explorer
-        noremap <silent> <leader>j :execute 'CocCommand explorer' .
-            \ ' --toggle' .
-            \ ' --sources=buffer+,file+' .
-            \ ' --file-columns=git,selection,icon,clip,indent,filename,size ' . expand('%:p:h')<CR>
+        " noremap <silent> <leader>j :execute 'CocCommand explorer' .
+        "    \ ' --toggle' .
+        "    \ ' --sources=buffer+,file+' .
+        "    \ ' --file-columns=git,selection,icon,clip,indent,filename,size ' . expand('%:p:h')<CR>
 endif
