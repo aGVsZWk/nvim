@@ -12,7 +12,7 @@
 
 - 基于 coc 的自动补全
 
-- 基于 zfz 的搜索功能
+- 基于 feaderf 的搜索功能
 
 - one dark 主题，也可以自由替换喜欢的主题
 
@@ -48,8 +48,6 @@
 ├── +completion
 │   ├── coc // coc 插件配置
 │   │   └── config.vim
-│   └── fzf // fzf 插件配置
-│   └── config.vim
 ├── +lang // 语言配置
 │   └── go // go 语言配置
 │   └── config.vim
@@ -82,11 +80,11 @@
 | [ + b       | n    | :bprevious 切换上一个 buffer |
 | [ + n       | n    | :bnext 切换下一个 buffer     |
 | !           | n    | :! 快速输入强制执行命令      |
-| leader + w  | all  | 快速保存                     |
 | leader + j  | n, v | 向下拖动一行                 |
 | leader + k  | n, v | 向上拖动一行                 |
 | leader + d  | n, v | 重复当前行                   |
 | leader + cp | n    | 重复当前段落                 |
+| F10         | n    | 打开终端                     |
 
 #### 窗口
 
@@ -96,8 +94,8 @@
 | s + g  | n    | 垂直分屏                      |
 | s + t  | n    | 打开一个新的 buffer (:tabnew) |
 | s + o  | n    | 关闭其他 buffer (:only)       |
-| s + b  | n    | 上一个 buffer (:b#)           |
-| s + c  | n    | 关闭当前 buffer (:close)      |
+| s + b  | n    | 上一个 window (:b#)           |
+| s + c  | n    | 关闭当前 window (:close)      |
 
 #### Plugin: Defx
 
@@ -127,17 +125,25 @@
 | N                      | n    | 新建文件                       |
 | <BS> / u               | n    | 上一层                         |
 
-#### Plugin: fzf
+#### Plugin: leaderf
 
-| 快捷键          | 模式 | 描述                   |
-| --------------- | ---- | ---------------------- |
-| LocalLeader + b | n    | 搜索 Buffer (:Buffers) |
-| LocalLeader + f | n    | 搜索 文件 (:Files)     |
-| LocalLeader + g | n    | 搜索 文件内容 (:Rg)    |
-| LocalLeader + t | n    | 搜索 Tags (:Tags)      |
-| ctrl + t        | n    | 新 tab 页面打开        |
-| ctrl + x        | n    | 垂直分屏打开           |
-| ctrl + v        | n    | 水平分屏打开           |
+| 快捷键          | 模式 | 描述              |
+| --------------- | ---- | ----------------- |
+| LocalLeader + b | n    | 搜索 Buffer       |
+| LocalLeader + f | n    | 搜索 文件         |
+| LocalLeader + t | n    | 搜索 Tags         |
+| LocalLeader + l | n    | 搜索 当前文件     |
+| LocalLeader + g | n    | 搜索 当前项目文本 |
+| ctrl + x        | n    | 垂直分屏打开      |
+| ctrl + ]        | n    | 水平分屏打开      |
+
+#### Plugin:easy-motion
+
+| 快捷键       | 模式 | 描述     |
+| ------------ | ---- | -------- |
+| ss           | n    | 快速跳转 |
+| leader + f   | n    | 快速跳转 |
+| leader + j/k | n    | 行跳转   |
 
 #### Plugin: vim-surround
 
@@ -156,4 +162,3 @@ ds"
 ysiw]
 
 其中 iw 是 vim 文本对象概念
-

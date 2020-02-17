@@ -33,10 +33,10 @@ vnoremap <silent><C-s> :<C-u>write<CR>
 cnoremap <silent><C-s> <C-u>write<CR>
 
 " Drag current line/s vertically and auto-indent
-nnoremap <Leader>k :m-2<CR>
-nnoremap <Leader>j :m+<CR>
-vnoremap <Leader>k :m'<-2<CR>gv=gv
-vnoremap <Leader>j :m'>+<CR>gv=gv
+" nnoremap <Leader>k :m-2<CR>
+" nnoremap <Leader>j :m+<CR>
+" vnoremap <Leader>k :m'<-2<CR>gv=gv
+" vnoremap <Leader>j :m'>+<CR>gv=gv
 
 " Duplicate lines
 nnoremap <Leader>d m`YP``

@@ -32,11 +32,12 @@ if dein#tap('vim-easymotion')
 endif
 
 if dein#tap('LeaderF')
-  let g:Lf_ShortcutF = "<LocalLeader>f"
+  let g:Lf_ShortcutF = "<localleader>f"
   noremap <localleader>b :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
   noremap <localleader>m :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
   noremap <localleader>t :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
   noremap <localleader>l :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+  noremap <localleader>g :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
 endif
 
 if dein#tap('caw.vim')
