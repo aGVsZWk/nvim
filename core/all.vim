@@ -11,6 +11,8 @@ if dein#tap('vim-easymotion')
   map  <Leader>f <Plug>(easymotion-bd-f)
   nmap <Leader>f <Plug>(easymotion-overwin-f)
   " JK motions: Line motions
+  map <Leader>l <Plug>(easymotion-lineforward)
+  map <Leader>h <Plug>(easymotion-linebackward)
   map <Leader>j <Plug>(easymotion-j)
   map <Leader>k <Plug>(easymotion-k)
   " Move to line
