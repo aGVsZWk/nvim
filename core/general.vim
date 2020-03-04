@@ -5,8 +5,8 @@ endif
 
 set nobackup " 覆盖文件时保留备份文件
 set noswapfile " 缓冲区是否使用交换文件
-" set autoread
-" set autowrite
+set autoread
+set autowrite
 set splitbelow " 分割窗口时新窗口在当前窗口之下
 
 if has('vim_starting')
