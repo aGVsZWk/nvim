@@ -33,6 +33,13 @@ if dein#tap('vim-easymotion')
   
 endif
 
+" if dein#tap('fzf.vim')
+"         nnoremap <silent> <leader>bb :Buffers<CR>
+"         nnoremap <silent> <LocalLeader>f :call Fzf_dev()<CR>
+"         nnoremap <silent> <localleader>g :Rg<CR>
+"         nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
+" endif
+
 if dein#tap('LeaderF')
   let g:Lf_ShortcutF = "<localleader>f"
   noremap <localleader>b :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>

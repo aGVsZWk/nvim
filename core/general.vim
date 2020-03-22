@@ -45,7 +45,7 @@ set ttimeoutlen=10
 set updatetime=100
 set undofile " 把撤销信息写入一个文件里
 set undodir=~/.tmp/undo
-set relativenumber
+" set relativenumber
 set backspace=indent,eol,start " 在一行开关按退格键如何处理
 " Tabs and Indents {{{
 " ----------------
