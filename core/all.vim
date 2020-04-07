@@ -33,21 +33,21 @@ if dein#tap('vim-easymotion')
   
 endif
 
-" if dein#tap('fzf.vim')
-"         nnoremap <silent> <leader>bb :Buffers<CR>
-"         nnoremap <silent> <LocalLeader>f :call Fzf_dev()<CR>
-"         nnoremap <silent> <localleader>g :Rg<CR>
-"         nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
-" endif
-
-if dein#tap('LeaderF')
-  let g:Lf_ShortcutF = "<localleader>f"
-  noremap <localleader>b :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
-  noremap <localleader>m :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
-  noremap <localleader>t :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
-  noremap <localleader>l :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
-  noremap <localleader>g :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
+if dein#tap('fzf.vim')
+        nnoremap <silent> <leader>bb :Buffers<CR>
+        nnoremap <silent> <LocalLeader>f :call Fzf_dev()<CR>
+        nnoremap <silent> <localleader>g :Rg<CR>
+        nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
 endif
+
+" if dein#tap('LeaderF')
+"   let g:Lf_ShortcutF = "<localleader>f"
+"   noremap <localleader>b :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+"   noremap <localleader>m :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+"   noremap <localleader>t :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+"   noremap <localleader>l :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+"   noremap <localleader>g :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
+" endif
 
 if dein#tap('caw.vim')
     function! InitCaw() abort

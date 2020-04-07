@@ -36,7 +36,7 @@ if executable('rg')
 endif
 
 let $FZF_DEFAULT_OPTS='--layout=reverse'
-let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 function! FloatingFZF()
   let buf = nvim_create_buf(v:false, v:true)
